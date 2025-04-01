@@ -1,56 +1,37 @@
-﻿@model Variaveis
-@{
-    ViewData["Title"] = "Home Page";
+﻿@if (ViewBag.Mensagem != null)
+{
+    <div>
+        <strong>@ViewBag.Mensagem</strong>
+    </div>
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to the mato</h1>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
 
-    <p>
-        O valor de <b>UserCount</b> é: <i>@Model.userCount</i>
-    </p>
+<form id="JogoVelhaForm" method="post">
+    <div>
+        <table>
+            <tr>
+                <td><input type="text" name="A00" maxlength="1" pattern="[XO]"/></td>
+                <td><input type="text" name="A01" maxlength="1" pattern="[XO]" /></td>
+                <td><input type="text" name="A02" maxlength="1" pattern="[XO]" /></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="A10" maxlength="1" pattern="[XO]" /></td>
+                <td><input type="text" name="A11" maxlength="1" pattern="[XO]" /></td>
+                <td><input type="text" name="A12" maxlength="1" pattern="[XO]" /></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="A20" maxlength="1" pattern="[XO]" /></td>
+                <td><input type="text" name="A21" maxlength="1" pattern="[XO]" /></td>
+                <td><input type="text" name="A22" maxlength="1" pattern="[XO]" /></td>
+            </tr>
+        </table>
+    </div>
 
-    <p>
-        O valor de <b>TotalCount</b> é: <i>@Model.totalCount</i>
-    </p>
+</form>
 
 
-
-
-    <p>
-        O valor mínimo de <b>Byte</b> é: <i>@Model.minByte</i> e o máximo é <i>@Model.maxByte</i>
-    </p>
-
-    <p>
-        O valor mínimo de <b>sByte</b> é: <i>@Model.minSbyte</i> e o máximo é <i>@Model.maxSbyte</i>
-    </p>
-
-    <p>
-        O valor mínimo de <b>Short</b> é: <i>@Model.minShort</i> e o máximo é <i>@Model.maxShort</i>
-    </p>
-
-    <p>
-        O valor mínimo de <b>Ushort</b> é: <i>@Model.minUshort</i> e o máximo é <i>@Model.maxUshort</i>
-    </p>
-
-    <p>
-        O valor mínimo de <b>Int</b> é: <i>@Model.minInt</i> e o máximo é <i>@Model.maxInt</i>
-    </p>
-
-    <p>
-        O valor mínimo de <b>Uint</b> é: <i>@Model.minUint</i> e o máximo é <i>@Model.maxUint</i>
-    </p>
-
-    <p>
-        O valor mínimo de <b>Long</b> é: <i>@Model.minLong</i> e o máximo é <i>@Model.maxLong</i>
-    </p>
-
-    <p>
-        O valor mínimo de <b>Ulong</b> é: <i>@Model.minUlong</i> e o máximo é <i>@Model.maxUlong</i>
-    </p>
-    
-
-    
-
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
